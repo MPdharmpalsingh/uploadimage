@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Axios from "axios";
-import "./App.css";
 
+import "./App.css";
+import Axios from "axios";
 
 function App() {
   const [name, setName] = useState();
@@ -12,7 +12,7 @@ function App() {
     data.append("name", name);
     data.append("file", file);
 
-    Axios.post("https://localhost:3000/upload", data)
+    Axios.post("https://httpbin.org/anything", data)
       .then(res => console.log(res))
       .catch(err => console.log(err));
   };
